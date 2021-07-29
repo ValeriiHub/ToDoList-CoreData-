@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import CoreData
 
 class TableViewController: UITableViewController {
 
-    var tasks: [String] = []
+    var tasks: [Task] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,8 @@ class TableViewController: UITableViewController {
                                                 preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "Save", style: .default) { action in
             let textField = alertController.textFields?.first
-            if let newTask = textField?.text {
-                self.tasks.insert(newTask, at: 0)
+            if let newTaskTitle = textField?.text {
+                self.saveTask(withTitle: newTaskTitle)
                 self.tableView.reloadData()
             }
         }
@@ -42,7 +43,23 @@ class TableViewController: UITableViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-
+    private func saveTask(withTitle title: String) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate // добираемся до AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        guard let entity = NSEntityDescription.entity(forEntityName: "Task", in: context) else { return }
+        
+        let taskObject = Task(entity: entity, insertInto: context)
+        taskObject.title = title
+        
+        do {
+            try context.save()
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,7 +74,7 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
-        cell.textLabel?.text = tasks[indexPath.row]
+        cell.textLabel?.text = tasks[indexPath.row].title
 
         return cell
     }
