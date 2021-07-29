@@ -9,23 +9,23 @@
 /* Begin PBXBuildFile section */
 		383BCBE526B3018200AF2233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BCBE426B3018200AF2233 /* AppDelegate.swift */; };
 		383BCBE726B3018200AF2233 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BCBE626B3018200AF2233 /* SceneDelegate.swift */; };
-		383BCBE926B3018200AF2233 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BCBE826B3018200AF2233 /* ViewController.swift */; };
 		383BCBEC26B3018200AF2233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383BCBEA26B3018200AF2233 /* Main.storyboard */; };
 		383BCBEF26B3018200AF2233 /* ToDoList_CoreData_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 383BCBED26B3018200AF2233 /* ToDoList_CoreData_.xcdatamodeld */; };
 		383BCBF126B3018500AF2233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 383BCBF026B3018500AF2233 /* Assets.xcassets */; };
 		383BCBF426B3018500AF2233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 383BCBF226B3018500AF2233 /* LaunchScreen.storyboard */; };
+		383BCBFC26B302EC00AF2233 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 383BCBFB26B302EC00AF2233 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		383BCBE126B3018200AF2233 /* ToDoList(CoreData).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoList(CoreData).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		383BCBE426B3018200AF2233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		383BCBE626B3018200AF2233 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		383BCBE826B3018200AF2233 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		383BCBEB26B3018200AF2233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		383BCBEE26B3018200AF2233 /* ToDoList_CoreData_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList_CoreData_.xcdatamodel; sourceTree = "<group>"; };
 		383BCBF026B3018500AF2233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		383BCBF326B3018500AF2233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		383BCBF526B3018500AF2233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		383BCBFB26B302EC00AF2233 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 			children = (
 				383BCBE426B3018200AF2233 /* AppDelegate.swift */,
 				383BCBE626B3018200AF2233 /* SceneDelegate.swift */,
-				383BCBE826B3018200AF2233 /* ViewController.swift */,
+				383BCBFB26B302EC00AF2233 /* TableViewController.swift */,
 				383BCBEA26B3018200AF2233 /* Main.storyboard */,
 				383BCBF026B3018500AF2233 /* Assets.xcassets */,
 				383BCBF226B3018500AF2233 /* LaunchScreen.storyboard */,
@@ -140,10 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				383BCBE926B3018200AF2233 /* ViewController.swift in Sources */,
 				383BCBE526B3018200AF2233 /* AppDelegate.swift in Sources */,
 				383BCBEF26B3018200AF2233 /* ToDoList_CoreData_.xcdatamodeld in Sources */,
 				383BCBE726B3018200AF2233 /* SceneDelegate.swift in Sources */,
+				383BCBFC26B302EC00AF2233 /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529RQ8FURU;
 				INFOPLIST_FILE = "ToDoList(CoreData)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529RQ8FURU;
 				INFOPLIST_FILE = "ToDoList(CoreData)/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
